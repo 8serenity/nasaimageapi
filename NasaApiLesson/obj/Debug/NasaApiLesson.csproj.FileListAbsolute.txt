@@ -14,3 +14,21 @@ c:\users\мухамедьян\documents\visual studio 2017\Projects\NasaApiLesso
 c:\users\мухамедьян\documents\visual studio 2017\Projects\NasaApiLesson\NasaApiLesson\obj\Debug\NasaApiLesson.pdb
 c:\users\мухамедьян\documents\visual studio 2017\Projects\NasaApiLesson\NasaApiLesson\bin\Debug\Newtonsoft.Json.dll
 c:\users\мухамедьян\documents\visual studio 2017\Projects\NasaApiLesson\NasaApiLesson\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\NasaApiLesson.exe.config
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\NasaApiLesson.exe
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\NasaApiLesson.pdb
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.csprojResolveAssemblyReference.cache
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\MainWindow.g.cs
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\App.g.cs
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson_MarkupCompile.cache
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson_MarkupCompile.lref
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\MainWindow.baml
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.g.resources
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.Properties.Resources.resources
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.csproj.GenerateResource.cache
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.csproj.CoreCompileInputs.cache
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.csproj.CopyComplete
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.exe
+C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\obj\Debug\NasaApiLesson.pdb

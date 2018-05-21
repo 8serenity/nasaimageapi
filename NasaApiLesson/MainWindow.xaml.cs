@@ -28,33 +28,60 @@ namespace NasaApiLesson
             InitializeComponent();
         }
 
-        private async  void LoadButtonClick(object sender, RoutedEventArgs e)
+        private async void LoadButtonClick(object sender, RoutedEventArgs e)
         {
-           await LoadImage();
+            imageHost.Source = null;
+            loadingBar.IsIndeterminate = true;
+            if(!userDatePicker.SelectedDate.HasValue || userDatePicker.SelectedDate >= DateTime.Now)
+            {
+                loadingBar.IsIndeterminate = false;
+                return;
+            }
+            var result = await LoadImage(userDatePicker.SelectedDate.Value);
+            loadingBar.IsIndeterminate = false;
+
+            explanationImage.Text = result.Explanation;
+
+
+            File.Copy("newImage.jpg", "copyImage.jpg", true);
+
+            imageHost.Source = new BitmapImage(new Uri(@"C:\Users\Мухамедьян\Desktop\nasaapi\NasaApiLesson\bin\Debug\copyImage.jpg"));
+            
         }
 
-        private Task LoadImage()
+        private Task<NasaImageResponse> LoadImage(DateTime date)
         {
             return Task.Run(() =>
             {
                 WebClient client = new WebClient();
-                //client.BaseAddress = "https://api.nasa.gov/planetary/apod";
-                //client.QueryString.Add("hd", "True");
                 //client.QueryString.Add("api_key", "h7lH17irANgRnxTRT0H8KjFzB4SMD2FCIlyvH5lN");
-                //client.QueryString.Add("date", "1994-11-08"); &date=1994-11-08
+                //client.QueryString.Add("hd", "True");
+                //client.QueryString.Add("date", "1994-11-08");
 
-                using (Stream stream = client.OpenRead("https://api.nasa.gov/planetary/apod?api_key=h7lH17irANgRnxTRT0H8KjFzB4SMD2FCIlyvH5lN"))
+                //client.DownloadFile("https://api.nasa.gov/planetary/apod", "jsonNasa.txt");
+
+                //using (StreamReader reader = new StreamReader("jsonNasa.txt"))
+                //{
+                //    string data = reader.ReadToEnd();
+                //    NasaImageResponse response = JsonConvert.DeserializeObject<NasaImageResponse>(data);
+                //    client.DownloadFile(response.Hdurl, "universe.jpg");
+                //}
+
+                string url = "https://api.nasa.gov/planetary/apod?api_key=h7lH17irANgRnxTRT0H8KjFzB4SMD2FCIlyvH5lN&hd=true&date="
+                + date.ToString("yyyy-MM-dd");
+
+                using (Stream stream = client.OpenRead(url))
                 {
                     using (StreamReader reader = new StreamReader(stream))
                     {
                         string data = reader.ReadToEnd();
                         NasaImageResponse response = JsonConvert.DeserializeObject<NasaImageResponse>(data);
-                        client.DownloadFile( response.Hdurl, "universe.jpg");
+                        client.DownloadFile(response.Hdurl, "newImage.jpg");
+                        return response;
                     }
-                } ;
+                };
 
-            }
-               );
+            });
         }
     }
 }

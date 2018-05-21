@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="loadButton"  Content="Load" HorizontalAlignment="Left" Margin="212,258,0,0" VerticalAlignment="Top" Width="75" Click="LoadButtonClick"/>
-        <Image x:Name="imageHost"  HorizontalAlignment="Left" Height="203" Margin="28,26,0,0" VerticalAlignment="Top" Width="465"/>
-
+        <Button x:Name="loadButton"  Content="Load" HorizontalAlignment="Left" Margin="367,257,0,0" VerticalAlignment="Top" Width="75" Click="LoadButtonClick"/>
+        <Image x:Name="imageHost"  HorizontalAlignment="Left" Height="203" Margin="28,26,0,0" VerticalAlignment="Top" Width="216"/>
+        <DatePicker Name="userDatePicker" HorizontalAlignment="Left" Margin="57,260,0,0" VerticalAlignment="Top"/>
+        <ProgressBar Name="loadingBar" HorizontalAlignment="Left" Height="10" Margin="193,244,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock Name="explanationImage" HorizontalAlignment="Left" Margin="333,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="200" Width="150"/>
     </Grid>
 </Window>
